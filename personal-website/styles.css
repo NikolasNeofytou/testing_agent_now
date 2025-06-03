@@ -1,0 +1,63 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    background: #0d47a1;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.intro-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.projects-section, .skills-section {
+    padding: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.skills-list {
+    columns: 2;
+    column-gap: 2rem;
+}
+
+.footer {
+    background: #0d47a1;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}

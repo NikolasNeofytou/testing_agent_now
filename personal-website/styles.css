@@ -14,11 +14,18 @@ main {
 .header {
     background: linear-gradient(90deg, #0d47a1, #1976d2);
     color: #fff;
-    padding: 1rem;
-    text-align: center;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
 }
 
 .nav-list {
@@ -28,18 +35,23 @@ main {
 
 .nav-list li {
     display: inline-block;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
 }
 
 .nav-list a {
     color: #fff;
     text-decoration: none;
     padding: 0.25rem 0.5rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-list a:hover {
     color: #bbdefb;
+    transform: translateY(-2px);
+}
+
+.nav-list a.active {
+    border-bottom: 2px solid #bbdefb;
 }
 
 .intro-section {
@@ -56,6 +68,16 @@ main {
     justify-content: center;
 }
 
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+}
+
 .hero-media {
     width: 100%;
     height: 100%;
@@ -64,6 +86,7 @@ main {
 
 .hero-text {
     position: absolute;
+    z-index: 1;
     color: #fff;
     font-size: 2rem;
     font-weight: bold;
@@ -81,10 +104,34 @@ main {
 }
 
 .project-card {
-    border: 1px solid #ddd;
-    padding: 1rem;
+    position: relative;
+    overflow: hidden;
     border-radius: 8px;
-    background: #fafafa;
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .card-overlay {
+    opacity: 1;
 }
 
 .skills-list {
@@ -108,6 +155,11 @@ main {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
 }
 
 .footer {

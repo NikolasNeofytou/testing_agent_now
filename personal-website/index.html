@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Engineer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">EE Portfolio</div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- Replace intro.mp4 with your own video or hero image -->
+            <video class="hero-media" autoplay muted loop playsinline>
+                <source src="media/intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-text">
+                <p>Welcome to my portfolio</p>
+            </div>
+        </section>
+        <section id="intro" class="intro-section">
+            <p>Welcome to my personal website where I showcase my projects and skills as an electrical engineer.</p>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <img src="media/project1.jpg" alt="project image">
+                    <div class="card-overlay">
+                        <h3>Project Name</h3>
+                        <p>Short description of the project.</p>
+                    </div>
+                </article>
+                <!-- Add more project-card items here -->
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Placeholder images -->
+                <img src="media/sample1.jpg" alt="sample project" class="gallery-img">
+                <img src="media/sample2.jpg" alt="sample project" class="gallery-img">
+                <img src="media/sample3.jpg" alt="sample project" class="gallery-img">
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Analog Circuit Design</li>
+                <li>Embedded Systems</li>
+                <li>Power Electronics</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <p>Get in touch: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
